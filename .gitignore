@@ -1,1 +1,5 @@
 .idea
+users/images/*
+!users/images/.gitkeep
+*.txt
+*.pdf
