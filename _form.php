@@ -15,23 +15,38 @@
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="mb-3 form-group">
                     <label class="form-label" for="name">Name</label>
-                    <input class="form-control" id="name" type="text" name="name" value="<?= $user['name'] ?? '' ?>">
+                    <input class="form-control <?= $errors['name'] ? 'is-invalid' : ''; ?>" id="name" type="text" name="name" value="<?= $user['name'] ?? '' ?>">
+                    <div class="invalid-feedback">
+                        <?= $errors['name'] ?>
+                    </div>
                 </div>
                 <div class="mb-3 form-group">
                     <label class="form-label" for="username">Username</label>
-                    <input class="form-control" id="username" type="text" name="username" value="<?= $user['username'] ?? '' ?>">
+                    <input class="form-control <?= $errors['username'] ? 'is-invalid' : ''; ?>" id="username" type="text" name="username" value="<?= $user['username'] ?? '' ?>">
+                    <div class="invalid-feedback">
+                        <?= $errors['username'] ?>
+                    </div>
                 </div>
                 <div class="mb-3 form-group">
                     <label class="form-label" for="email">Email</label>
-                    <input class="form-control" id="email" type="email" name="email" value="<?= $user['email'] ?? '' ?>">
+                    <input class="form-control <?= $errors['email'] ? 'is-invalid' : ''; ?>" id="email" type="email" name="email" value="<?= $user['email'] ?? '' ?>">
+                    <div class="invalid-feedback">
+                        <?= $errors['email'] ?>
+                    </div>
                 </div>
                 <div class="mb-3 form-group">
                     <label class="form-label" for="phone">Phone</label>
-                    <input class="form-control" id="phone" type="text" name="phone" value="<?= $user['phone'] ?? '' ?>">
+                    <input class="form-control <?= $errors['phone'] ? 'is-invalid' : ''; ?>" id="phone" type="text" name="phone" value="<?= $user['phone'] ?? '' ?>">
+                    <div class="invalid-feedback">
+                        <?= $errors['phone'] ?>
+                    </div>
                 </div>
                 <div class="mb-3 form-group">
                     <label class="form-label" for="website">Website</label>
-                    <input class="form-control" id="website" type="text" name="website" value="<?= $user['website'] ?? '' ?>">
+                    <input class="form-control <?= $errors['website'] ? 'is-invalid' : ''; ?>" id="website" type="text" name="website" value="<?= $user['website'] ?? '' ?>">
+                    <div class="invalid-feedback">
+                        <?= $errors['website'] ?>
+                    </div>
                 </div>
                 <div class="mb-3 form-group">
                     <label class="form-label" for="picture">Image</label>
